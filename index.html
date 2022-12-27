@@ -18,26 +18,30 @@
         <div class="right-side">
             <h2>Sign Up</h2>
 
-            <form method="post" class="f-validator">
+            <form method="POST" class="f-validator">
                 <label>
                     Name:<br>
-                    <input type="text" name="name">
+                    <input type="text" name="name" data-rules="required|min=2">
                 </label>
                 <label>
                     E-mail:<br>
-                    <input type="text" name="emai">
+                    <input type="text" name="email" data-rules="required|email">
                 </label>
                 <label>
                     Password:<br>
-                    <input type="password" name="password">
+                    <input type="password" name="password" data-rules="required|min=6">
                 </label>
                 <label>
-                    <input type="button" value="submit">
+                    Confirm Password:<br>
+                    <input type="password" name="confirm-password">
+                </label>
+                <label>
+                    <input type="submit" value="Submit" class="button">
                 </label>
             </form>
 
             <div>
-
+                Already have an account? <a href="">Sign In</a>
             </div>
         </div>
     </div>
